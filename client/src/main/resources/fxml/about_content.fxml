@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="1000.0" style="-fx-background-color: #f2d3cc; -fx-background-radius: 0 0 20 20; -fx-border-radius: 0 0 20 20;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.leonhard_leung.view.AboutView">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dfafb4" height="200.0" layoutX="97.0" layoutY="170.0" stroke="TRANSPARENT" strokeType="INSIDE" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="83.0" layoutX="20.0" layoutY="329.0" stroke="#deafb5" strokeType="INSIDE" strokeWidth="5.0" width="167.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="159.0" layoutX="262.0" layoutY="101.0" stroke="#deafb5" strokeType="INSIDE" strokeWidth="5.0" width="71.0" />
+      <Text id="aboutText" fill="#631f3a" layoutX="387.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="At Love &amp; Latte Lounge, we're not just a cafe - we're a cozy retreat for coffee lovers." textAlignment="JUSTIFY" wrappingWidth="598.966796875">
+         <font>
+            <Font name="Garamond" size="24.0" />
+         </font></Text>
+      <Text id="aboutText" fill="#631f3a" layoutX="387.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nestled in the heart of Moonglow Street, our cafe is where friends gather, conversations flow, and memories are made. From our inviting seating areas to our friendly staff, every aspect is designed to create a welcoming atmosphere." textAlignment="JUSTIFY" wrappingWidth="598.966796875">
+         <font>
+            <Font name="Garamond" size="24.0" />
+         </font>
+      </Text>
+      <Text id="aboutText" fill="#631f3a" layoutX="387.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We are committed to quality in every cup. Our finest coffee beans are expertly roasted for a rich and flavorful experience." textAlignment="JUSTIFY" wrappingWidth="598.966796875">
+         <font>
+            <Font name="Garamond" size="24.0" />
+         </font>
+      </Text>
+      <Text id="aboutText" fill="#631f3a" layoutX="387.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="But Love &amp; Latte Lounge is more that just coffee - it's a place to relax and enjoy life's simple pleasures. Whether it's your morning pick-me-up or an evening unwind, make yourself at home with use." textAlignment="JUSTIFY" wrappingWidth="598.966796875">
+         <font>
+            <Font name="Garamond" size="24.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="243.0" fitWidth="167.0" layoutX="198.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/landing_page/about/cafe_interior.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="250.0" fitWidth="167.0" layoutX="12.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/landing_page/about/entrance.jpg" />
+         </image>
+      </ImageView>
+      <Text id="aboutUs" fill="#631f3a" layoutX="387.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About Us" wrappingWidth="282.966796875">
+         <font>
+            <Font name="Monotype Corsiva" size="60.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

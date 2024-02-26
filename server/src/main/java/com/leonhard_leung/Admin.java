@@ -4,7 +4,7 @@ package com.leonhard_leung;
  * Hello world!
  *
  */
-public class App 
+public class Admin
 {
     public static void main( String[] args )
     {

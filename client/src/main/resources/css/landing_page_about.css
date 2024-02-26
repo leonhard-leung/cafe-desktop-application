@@ -1,0 +1,11 @@
+#aboutUs {
+    -fx-font-family: 'Chewy';
+    -fx-font-size: 60;
+    -fx-text-fill: #631f3a;
+}
+
+#aboutText {
+    -fx-font-family: 'Louis George Cafe';
+    -fx-font-size: 22;
+    -fx-text-fill: #631f3a;
+}

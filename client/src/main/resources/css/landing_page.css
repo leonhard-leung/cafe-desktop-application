@@ -1,0 +1,54 @@
+#cafeName {
+    -fx-font-family: 'Chewy';
+    -fx-font-size: 60;
+    -fx-text-fill: #631f3a;
+}
+
+#homeText {
+    -fx-font-family: 'Louis George Cafe';
+    -fx-font-size: 23;
+    -fx-text-fill: #631f3a;
+}
+
+#loginButton {
+    -fx-font-family: 'MoonLookDemo';
+    -fx-font-size: 20;
+    -fx-background-color: #631f3a;
+    -fx-border-color: #631f3a;
+    -fx-border-width: 2;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-text-fill: #f2d3cc;
+}
+
+#signupButton {
+    -fx-font-family: 'MoonLookDemo';
+    -fx-font-size: 20;
+    -fx-background-color: transparent;
+    -fx-border-color: #631f3a;
+    -fx-border-width: 2;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-text-fill: #631f3a;
+}
+
+#signupButton:hover {
+    -fx-background-color: #631f3a;
+    -fx-text-fill: #f2d3cc;
+}
+
+#menuButton {
+    -fx-font-family: 'Fredoka One Regular';
+    -fx-font-size: 22;
+    -fx-background-color: transparent;
+    -fx-text-fill: #631f3a;
+}
+
+#menuButton:hover {
+    -fx-text-fill: rgba(99, 31, 58, 0.7);
+}
+
+#menuButton:pressed {
+    -fx-border-color: #631f3a;
+    -fx-border-width: 0 0 1 0;
+}

@@ -23,6 +23,7 @@ public class ClientInterfaceTest extends Application {
         Font.loadFont(getClass().getResourceAsStream("/fonts/RobotoCondensed-Regular.ttf"), 12);
         Font.loadFont(getClass().getResourceAsStream("/fonts/FredokaOne-Regular.ttf"), 12);
         Font.loadFont(getClass().getResourceAsStream("/fonts/MoonLookDemoRegular.ttf"), 12);
+        Font.loadFont(getClass().getResourceAsStream("/fonts/HappyCaramelDemoRegular.ttf"), 12);
         scene.getStylesheets().add(getClass().getResource("/css/landing_page.css").toExternalForm());
         stage.setScene(scene);
         stage.setResizable(false);

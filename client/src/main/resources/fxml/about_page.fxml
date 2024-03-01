@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
@@ -33,11 +34,17 @@
          <image>
             <Image url="@../images/landing_page/about/cafe_interior.jpg" />
          </image>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" />
+         </effect>
       </ImageView>
       <ImageView fitHeight="250.0" fitWidth="167.0" layoutX="12.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/landing_page/about/entrance.jpg" />
          </image>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" />
+         </effect>
       </ImageView>
       <Text id="aboutUs" fill="#631f3a" layoutX="387.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About Us" wrappingWidth="282.966796875">
          <font>

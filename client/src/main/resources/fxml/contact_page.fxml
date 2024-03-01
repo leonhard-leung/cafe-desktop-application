@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(to bottom,  #dfafb4 65%,   #f2d3cc 35%); -fx-background-radius: 0 0 20 20; -fx-border-radius: 0 0 20 20;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.leonhard_leung.view.ContactView">
+   <children>
+      <Text id="contactUs" fill="#631f3a" layoutX="28.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Us">
+         <font>
+            <Font name="Monotype Corsiva" size="60.0" />
+         </font>
+      </Text>
+      <VBox id="submitMessage" layoutX="439.0" layoutY="76.0" prefHeight="404.0" prefWidth="529.0" spacing="5.0" style="-fx-background-color: #f2d3cc; -fx-background-radius: 5;">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                     <children>
+                        <Text id="fieldLabel" fill="#631f3a" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name">
+                           <font>
+                              <Font name="Garamond" size="24.0" />
+                           </font>
+                        </Text>
+                        <TextField id="textField" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="252.0" promptText="first name">
+                           <font>
+                              <Font name="Garamond" size="20.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                     <children>
+                        <Text id="fieldLabel" fill="#631f3a" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name">
+                           <font>
+                              <Font name="Garamond" size="24.0" />
+                           </font>
+                        </Text>
+                        <TextField id="textField" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="252.0" promptText="last name">
+                           <font>
+                              <Font name="Garamond" size="20.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children></HBox>
+            <Text id="fieldLabel" fill="#631f3a" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+               <font>
+                  <Font name="Garamond" size="24.0" />
+               </font></Text>
+            <TextField id="textField" prefHeight="25.0" prefWidth="363.0" promptText="email">
+               <font>
+                  <Font name="Garamond" size="20.0" />
+               </font></TextField>
+            <Text id="fieldLabel" fill="#631f3a" strokeType="OUTSIDE" strokeWidth="0.0" text="How can we assist you?">
+               <font>
+                  <Font name="Garamond" size="24.0" />
+               </font></Text>
+            <TextArea id="textField" prefHeight="147.0" prefWidth="496.0" promptText="message" wrapText="true">
+               <font>
+                  <Font name="Garamond" size="20.0" />
+               </font></TextArea>
+            <HBox alignment="CENTER" prefHeight="6.0" prefWidth="509.0">
+               <children>
+                  <Button id="submitButton" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="38.0" prefWidth="200.0" text="SUBMIT" textFill="#631f3a">
+                     <font>
+                        <Font name="Copperplate Gothic Light" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="3.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="28.0" layoutY="352.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="154.0" prefWidth="384.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/landing_page/contact/location.png" />
+                     </image>
+                  </ImageView>
+                  <Text id="contacts" fill="#631f3a" strokeType="OUTSIDE" strokeWidth="0.0" text="Love &amp; Latte Lounge, 505 Moonglow Street, Baguio City, 2600" wrappingWidth="315.0">
+                     <font>
+                        <Font name="Garamond" size="20.0" />
+                     </font></Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/landing_page/contact/phone.png" />
+                     </image>
+                  </ImageView>
+                  <Text id="contacts" fill="#631f3a" strokeType="OUTSIDE" strokeWidth="0.0" text="+63 9270624140" wrappingWidth="315.0">
+                     <font>
+                        <Font name="Garamond" size="20.0" />
+                     </font></Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/landing_page/contact/email.png" />
+                     </image>
+                  </ImageView>
+                  <Text id="contacts" fill="#631f3a" strokeType="OUTSIDE" strokeWidth="0.0" text="support@loveandlattelounge.com" wrappingWidth="315.0">
+                     <font>
+                        <Font name="Garamond" size="20.0" />
+                     </font></Text>
+               </children>
+            </HBox>
+         </children></VBox>
+      <Text id="contactText" fill="#631f3a" layoutX="28.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Have a question, comment, or just want to say hello? Feel free to drop us a line using the form on the side. We love hearing from our customers and will get back to you as son as possible. Thank you for choosing Love &amp; Latte Lounge!" textAlignment="JUSTIFY" wrappingWidth="384.0">
+         <font>
+            <Font name="Garamond" size="25.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

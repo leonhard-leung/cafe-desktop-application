@@ -1,0 +1,45 @@
+#contactUs {
+    -fx-font-family: 'Chewy';
+    -fx-font-size: 60;
+    -fx-text-fill: #631f3a;
+}
+
+#fieldLabel {
+    -fx-font-family: 'Louis George Cafe';
+    -fx-font-size: 24;
+}
+
+#textField {
+    -fx-font-family: 'Louis George Cafe';
+    -fx-font-size: 22;
+    -fx-text-fill: #631f3a;
+    -fx-border-color: #dfafb4;
+    -fx-border-width: 1px;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+
+#textField:focused {
+    -fx-focus-color: red;
+}
+
+#submitMessage {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0, 0);
+}
+
+#submitButton {
+    -fx-font-family: 'Happy Caramel Demo';
+    -fx-font-size: 22;
+    -fx-background-color: #631f3a;
+    -fx-border-color: #631f3a;
+    -fx-border-width: 2;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-text-fill: #f2d3cc;
+}
+
+#contactText {
+    -fx-font-family: 'Louis George Cafe';
+    -fx-font-size: 23;
+    -fx-text-fill: #631f3a;
+}

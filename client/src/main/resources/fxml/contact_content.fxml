@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<?import javafx.scene.layout.*?>
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="1000.0" style="-fx-background-color: #dfafb4; -fx-background-radius: 0 0 20 20; -fx-border-radius: 0 0 20 20;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.ContactContent">
-   <children>
-      <Pane layoutX="542.0" layoutY="108.0" prefHeight="304.0" prefWidth="412.0" style="-fx-background-color: #f2d3cc; -fx-background-radius: 5;" />
-   </children>
-</AnchorPane>

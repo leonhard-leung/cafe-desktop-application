@@ -1,5 +1,4 @@
 package com.leonhard_leung.view;
-
 import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
 import javafx.application.Platform;
@@ -15,7 +14,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
-
 import java.awt.*;
 import java.io.IOException;
 import java.net.URI;
@@ -74,8 +72,11 @@ public class LandingPageView {
     private void initializeContentPanes() {
         Platform.runLater(() -> {
             try {
-                aboutContent = new FXMLLoader(getClass().getResource("/fxml/about_content.fxml")).load();
-                aboutContent.getStylesheets().add(getClass().getResource("/css/landing_page_about.css").toExternalForm());
+                aboutContent = new FXMLLoader(getClass().getResource("/fxml/about_page.fxml")).load();
+                aboutContent.getStylesheets().add(getClass().getResource("/css/about_page.css").toExternalForm());
+
+                contactContent = new FXMLLoader(getClass().getResource("/fxml/contact_page.fxml")).load();
+                contactContent.getStylesheets().add(getClass().getResource("/css/contact_page.css").toExternalForm());
             } catch (IOException exception) {
                 throw new RuntimeException(exception);
             }
@@ -90,8 +91,13 @@ public class LandingPageView {
         });
 
         aboutBT.setOnAction(event -> {
-            menuPane.setStyle("-fx-background-color: #dfafb4; -fx-background-radius: 20 20 0 0;");
+            menuPane.setStyle("-fx-background-color: #dfafb4; -fx-background-radius: 20 20 0 0; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0, 0);");
             stackPane.getChildren().setAll(aboutContent);
+        });
+
+        contactBT.setOnAction(event -> {
+            menuPane.setStyle("-fx-background-color: #dfafb4; -fx-background-radius: 20 20 0 0; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0, 0);");
+            stackPane.getChildren().setAll(contactContent);
         });
     }
 

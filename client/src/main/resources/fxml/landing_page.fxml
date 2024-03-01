@@ -72,7 +72,7 @@
          <children>
             <HBox fx:id="menuButtonPane" alignment="CENTER" layoutX="291.0" prefHeight="80.0" prefWidth="655.0" spacing="30.0">
                <children>
-                  <Button id="menuButton" fx:id="homeBT" mnemonicParsing="false" text="HOME" textFill="#631f3a">
+                  <Button id="menuButton" fx:id="homeBT" mnemonicParsing="false" style="-fx-border-color: #631f3a; -fx-border-width: 0 0 2 0;" text="HOME" textFill="#631f3a">
                      <font>
                         <Font name="Copperplate Gothic Bold" size="22.0" />
                      </font>

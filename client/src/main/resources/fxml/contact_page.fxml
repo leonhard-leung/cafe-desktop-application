@@ -67,7 +67,7 @@
                </font></TextArea>
             <HBox alignment="CENTER" prefHeight="6.0" prefWidth="509.0">
                <children>
-                  <Button id="submitButton" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="38.0" prefWidth="200.0" text="SUBMIT" textFill="#631f3a">
+                  <Button id="submitButton" fx:id="submitButton" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="38.0" prefWidth="200.0" text="SUBMIT" textFill="#631f3a">
                      <font>
                         <Font name="Copperplate Gothic Light" size="20.0" />
                      </font>

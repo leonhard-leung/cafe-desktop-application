@@ -1,4 +1,5 @@
 package com.leonhard_leung.view;
+import com.leonhard_leung.utility.UIUtility;
 import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
 import javafx.application.Platform;
@@ -60,10 +61,7 @@ public class LandingPageView {
     @FXML
     public void initialize() {
         initializeContentPanes();
-
-        setLoginButtonAnimation();
-        setSignupButtonAnimation();
-        setImageAnimation();
+        setComponentAnimations();
         setMenuClickBehavior();
         setSocialMediaImageBehavior();
         setMenuSwitch();
@@ -99,85 +97,13 @@ public class LandingPageView {
             menuPane.setStyle("-fx-background-color: #dfafb4; -fx-background-radius: 20 20 0 0; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0, 0);");
             stackPane.getChildren().setAll(contactContent);
         });
-    }
+    } // end of setMenuSwitch
 
-    private void setLoginButtonAnimation() {
-        TranslateTransition normalTransition = new TranslateTransition(Duration.millis(100), loginBT);
-        FadeTransition fadeIn = new FadeTransition(Duration.millis(100), loginBT);
-        FadeTransition fadeOut = new FadeTransition(Duration.millis(250), loginBT);
-        FadeTransition clickIn = new FadeTransition(Duration.millis(150), loginBT);
-        FadeTransition clickOut = new FadeTransition(Duration.millis(150), loginBT);
-
-        fadeIn.setToValue(0.7);
-        fadeOut.setToValue(1);
-        clickIn.setFromValue(0.7);
-        clickIn.setToValue(1);
-        clickOut.setFromValue(1);
-        clickOut.setToValue(0.7);
-
-        loginBT.setOnMouseClicked(actionEvent -> {
-            clickIn.playFromStart();
-            clickOut.setDelay(Duration.millis(150));
-            clickOut.play();
-        });
-
-        loginBT.setOnMouseEntered(event -> {
-            double originalY = loginBT.getTranslateY();
-            double desiredY = originalY - 3;
-
-            fadeIn.playFromStart();
-            normalTransition.setByY(desiredY - originalY);
-            normalTransition.playFromStart();
-        });
-
-        loginBT.setOnMouseExited(event -> {
-            fadeOut.playFromStart();
-            normalTransition.stop();
-            normalTransition.setByY(-loginBT.getTranslateY());
-            normalTransition.playFromStart();
-        });
-    } // end of setLoginButtonAnimation
-
-    private void setSignupButtonAnimation() {
-        FadeTransition clickIn = new FadeTransition(Duration.millis(150), signupBT);
-        FadeTransition clickOut = new FadeTransition(Duration.millis(150), signupBT);
-
-        clickIn.setFromValue(1);
-        clickIn.setToValue(0.7);
-        clickOut.setFromValue(0.7);
-        clickOut.setToValue(1);
-
-        signupBT.setOnMouseClicked(actionEvent -> {
-            clickIn.play();
-            clickOut.setDelay(Duration.millis(150));
-            clickOut.play();
-        });
-    } // end of setSignupButtonAnimation
-
-    private void setImageAnimation() {
-        TranslateTransition shakeTransition1 = new TranslateTransition(Duration.millis(50), sideImage);
-        shakeTransition1.setByX(2);
-        shakeTransition1.setAutoReverse(true);
-        shakeTransition1.setCycleCount(2);
-
-        TranslateTransition shakeTransition2 = new TranslateTransition(Duration.millis(50), sideImage);
-        shakeTransition2.setByX(-2);
-        shakeTransition2.setAutoReverse(true);
-        shakeTransition2.setCycleCount(2);
-
-        sideImage.setOnMouseEntered(event -> {
-            shakeTransition1.playFromStart();
-            shakeTransition1.setOnFinished(e -> shakeTransition2.playFromStart());
-        });
-
-        sideImage.setOnMouseExited(event -> {
-            shakeTransition1.stop();
-            shakeTransition2.stop();
-
-            sideImage.setTranslateX(0);
-            sideImage.setTranslateY(0);
-        });
-    } // end of setImageAnimation
+    private void setComponentAnimations() {
+        UIUtility.applyPrimaryButtonEffectsWithTranslation(loginBT);
+        UIUtility.applySecondaryButtonEffects(signupBT);
+        UIUtility.applyImageScreenShake(sideImage);
+    } // end of setComponentAnimations
 
     private void setMenuClickBehavior() {
         homeBT.setOnMouseClicked(event -> removeMenuButtonHighlight(homeBT));

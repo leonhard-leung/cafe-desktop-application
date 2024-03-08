@@ -1,7 +1,6 @@
 package com.leonhard_leung.view;
+
 import com.leonhard_leung.utility.UIUtility;
-import javafx.animation.FadeTransition;
-import javafx.animation.TranslateTransition;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,14 +10,13 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
-import javafx.util.Duration;
 import java.awt.*;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.Objects;
 
 public class LandingPageView {
     @FXML
@@ -27,8 +25,6 @@ public class LandingPageView {
     private StackPane stackPane;
     @FXML
     private AnchorPane anchorPane;
-    @FXML
-    private HBox menuButtonPane;
     @FXML
     private Button loginBT;
     @FXML
@@ -71,10 +67,13 @@ public class LandingPageView {
         Platform.runLater(() -> {
             try {
                 aboutContent = new FXMLLoader(getClass().getResource("/fxml/about_page.fxml")).load();
-                aboutContent.getStylesheets().add(getClass().getResource("/css/about_page.css").toExternalForm());
+                aboutContent.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/css/about_page.css")).toExternalForm());
 
                 contactContent = new FXMLLoader(getClass().getResource("/fxml/contact_page.fxml")).load();
-                contactContent.getStylesheets().add(getClass().getResource("/css/contact_page.css").toExternalForm());
+                contactContent.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/css/contact_page.css")).toExternalForm());
+
+                productContent = new FXMLLoader(getClass().getResource("/fxml/product_page.fxml")).load();
+                productContent.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/css/product_page.css")).toExternalForm());
             } catch (IOException exception) {
                 throw new RuntimeException(exception);
             }
@@ -82,7 +81,6 @@ public class LandingPageView {
     } // end of initializeContentPanes
 
     private void setMenuSwitch() {
-
         homeBT.setOnAction(event -> {
             menuPane.setStyle("-fx-background-color: linear-gradient(to right, #dfafb4 58%, #f2d3cc 38%); -fx-background-radius: 20 20 0 0;");
             stackPane.getChildren().setAll(anchorPane);
@@ -91,6 +89,11 @@ public class LandingPageView {
         aboutBT.setOnAction(event -> {
             menuPane.setStyle("-fx-background-color: #dfafb4; -fx-background-radius: 20 20 0 0; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0, 0);");
             stackPane.getChildren().setAll(aboutContent);
+        });
+
+        productBT.setOnAction(event -> {
+            menuPane.setStyle("-fx-background-color: #dfafb4; -fx-background-radius: 20 20 0 0; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0, 0);");
+            stackPane.getChildren().setAll(productContent);
         });
 
         contactBT.setOnAction(event -> {
@@ -145,10 +148,10 @@ public class LandingPageView {
     private void setImageEnteredAndExited(ImageView imageView, String imagePathEntered, String imagePathExited) {
         imageView.setOnMouseEntered(event -> {
             imageView.setCursor(Cursor.HAND);
-            imageView.setImage(new Image(getClass().getResourceAsStream(imagePathEntered)));
+            imageView.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream(imagePathEntered))));
         });
 
-        imageView.setOnMouseExited(event -> imageView.setImage(new Image(getClass().getResourceAsStream(imagePathExited))));
+        imageView.setOnMouseExited(event -> imageView.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream(imagePathExited)))));
     } // end of setImageEnteredAndExited
 
     private void setImageURI(ImageView imageView, String link) {

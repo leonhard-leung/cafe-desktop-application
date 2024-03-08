@@ -9,6 +9,11 @@
     -fx-font-size: 24;
 }
 
+#contacts {
+    -fx-font-family: 'Roboto Condensed Regular';
+    -fx-font-size: 20;
+}
+
 #textField {
     -fx-font-family: 'Louis George Cafe';
     -fx-font-size: 22;

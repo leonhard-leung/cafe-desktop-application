@@ -15,6 +15,5 @@ public class ContactView {
 
     private void setComponentAnimations() {
         UIUtility.applyPrimaryButtonEffects(submitButton);
-    }
-
-} // end of ContactView
+    } // end of setComponentAnimations
+} // end of ContactView class

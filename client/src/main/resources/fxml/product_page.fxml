@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="520.0" prefWidth="1000.0" style="-fx-background-color: #f2d3cc;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.leonhard_leung.view.ProductView">
+   <children>
+      <SplitPane fx:id="splitPane" dividerPositions="0.5" prefHeight="520.0" prefWidth="1000.0" style="-fx-background-color: #f2d3cc; -fx-background-radius: 0 0 20 20; -fx-border-radius: 0 0 20 20;">
+         <items>
+            <ScrollPane fx:id="beverageScrollPane" hbarPolicy="NEVER" onMouseEntered="#onBeveragesEntered" onMouseExited="#onBeveragesExited" prefHeight="200.0" prefWidth="874.0" style="-fx-background-color: #f2d3cc;">
+               <content>
+                  <VBox maxWidth="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" spacing="30.0" style="-fx-background-color: #f2d3cc;">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                     <children>
+                        <Pane fx:id="beverageHeaderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="760.0">
+                           <children>
+                              <Text id="categoryHeader" fx:id="beverageHeader" fill="#631f3a" layoutX="102.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BEVERAGES">
+                                 <font>
+                                    <Font name="Copperplate Gothic Bold" size="32.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Pane>
+                        <HBox alignment="CENTER_LEFT" layoutX="30.0" layoutY="110.0" prefHeight="258.0" prefWidth="760.0">
+                           <children>
+                              <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0">
+                                 <children>
+                                    <ImageView fitHeight="300.0" fitWidth="196.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/landing_page/product/hot_coffee.jpg" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow blurType="GAUSSIAN" />
+                                       </effect>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="300.0" prefWidth="460.0" spacing="15.0">
+                                 <children>
+                                    <Text id="subCategoryHeader" fill="#631f3a" strokeType="OUTSIDE" strokeWidth="0.0" text="Hot Drinks">
+                                       <font>
+                                          <Font name="Impact" size="30.0" />
+                                       </font>
+                                    </Text>
+                                    <Text id="text" fill="#631f3a" strokeType="OUTSIDE" strokeWidth="0.0" text="Experience the comforting warmth and rich flavors of our hot beverage offerings, thoughtfully prepared to delight your senses and provide a cozy respite from the hustle and bustle of the day. Enjoy a steaming cup of freshly brewed coffee, a velvety hot chocolate, or one of our specialty teas, each crafted with care to deliver a comforting and satisfying experience, sip after sip." textAlignment="JUSTIFY" wrappingWidth="460.0">
+                                       <font>
+                                          <Font name="Garamond" size="22.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="258.0" prefWidth="760.0">
+                           <children>
+                              <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0">
+                                 <children>
+                                    <ImageView fitHeight="300.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/landing_page/product/cold_coffee.jpg" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow blurType="GAUSSIAN" />
+                                       </effect>
+                                    </ImageView>
+                                 </children></VBox>
+                              <VBox prefHeight="300.0" prefWidth="460.0" spacing="15.0">
+                                 <children>
+                                    <Text id="subCategoryHeader" fill="#631f3a" strokeType="OUTSIDE" strokeWidth="0.0" text="Cold Drinks">
+                                       <font>
+                                          <Font name="Impact" size="30.0" />
+                                       </font></Text>
+                                    <Text id="text" fill="#631f3a" strokeType="OUTSIDE" strokeWidth="0.0" text="Indulge in our refresing selection of cold beverages, perfect for quenching your thirst on a warm day or whenever you're in the mood for something cool and revitalizing. From iced coffees and teas to chilled fruit smoothies and frappés, our cold drinks are crafted with the finest ingredients to provide a burst of flavor and a delightful chill with every sip." textAlignment="JUSTIFY" wrappingWidth="460.0">
+                                       <font>
+                                          <Font name="Garamond" size="22.0" />
+                                       </font></Text>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="50.0" />
+                           </VBox.margin></HBox>
+                     </children></VBox>
+               </content>
+            </ScrollPane>
+            <ScrollPane fx:id="foodScrollPane" hbarPolicy="NEVER" onMouseEntered="#onFoodEntered" onMouseExited="#onFoodExited" prefHeight="200.0" prefWidth="800.0" style="-fx-background-color: #f2d3cc;">
+               <content>
+                  <VBox maxWidth="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" spacing="30.0" style="-fx-background-color: #f2d3cc;">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                     <children>
+                        <Pane fx:id="foodHeaderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="760.0">
+                           <children>
+                              <Text id="categoryHeader" fx:id="foodHeader" fill="#631f3a" layoutX="163.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FOOD">
+                                 <font>
+                                    <Font name="Copperplate Gothic Bold" size="32.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Pane>
+                        <HBox alignment="CENTER_LEFT" prefHeight="258.0" prefWidth="760.0">
+                           <children>
+                              <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0">
+                                 <children>
+                                    <ImageView fitHeight="300.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/landing_page/product/macarons.jpg" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow blurType="GAUSSIAN" />
+                                       </effect>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="300.0" prefWidth="460.0" spacing="15.0">
+                                 <children>
+                                    <Text id="subCategoryHeader" fill="#631f3a" strokeType="OUTSIDE" strokeWidth="0.0" text="Sweet Treats">
+                                       <font>
+                                          <Font name="Impact" size="30.0" />
+                                       </font>
+                                    </Text>
+                                    <Text id="text" fill="#631f3a" strokeType="OUTSIDE" strokeWidth="0.0" text="Treat yourself to a delectable assortment of Sweet Treats at Love &amp; Latte Lounge. From rich, indulgent cakes to delicate pastries and irresistible cookies, our Sweet Treats menu offers a delightful array of desserts to satisfy your sweet tooth and elevate your day with every bite." textAlignment="JUSTIFY" wrappingWidth="460.0">
+                                       <font>
+                                          <Font name="Garamond" size="22.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="30.0" layoutY="120.0" prefHeight="258.0" prefWidth="760.0">
+                           <children>
+                              <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0">
+                                 <children>
+                                    <ImageView fitHeight="300.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/landing_page/product/sandwich.jpg" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow blurType="GAUSSIAN" />
+                                       </effect>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="300.0" prefWidth="460.0" spacing="15.0">
+                                 <children>
+                                    <Text id="subCategoryHeader" fill="#631f3a" strokeType="OUTSIDE" strokeWidth="0.0" text="Main Courses">
+                                       <font>
+                                          <Font name="Impact" size="30.0" />
+                                       </font>
+                                    </Text>
+                                    <Text id="text" fill="#631f3a" strokeType="OUTSIDE" strokeWidth="0.0" text="Indulge in the savory goodness of our Main Courses selection, featuring a variety of hearty and satisfying dishes crafted to tantalize your taste buds. From classic sandwiches and fresh salads to flavorful entrees, our menu offers a diverse range of options to suit every craving and occasion." textAlignment="JUSTIFY" wrappingWidth="460.0">
+                                       <font>
+                                          <Font name="Garamond" size="22.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="30.0" layoutY="120.0" prefHeight="258.0" prefWidth="760.0">
+                           <children>
+                              <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0">
+                                 <children>
+                                    <ImageView fitHeight="300.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/landing_page/product/rectangular_pizza.jpg" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow blurType="GAUSSIAN" />
+                                       </effect>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="300.0" prefWidth="460.0" spacing="15.0">
+                                 <children>
+                                    <Text id="subCategoryHeader" fill="#631f3a" strokeType="OUTSIDE" strokeWidth="0.0" text="Specialties">
+                                       <font>
+                                          <Font name="Impact" size="30.0" />
+                                       </font>
+                                    </Text>
+                                    <Text id="text" fill="#631f3a" strokeType="OUTSIDE" strokeWidth="0.0" text="Discover the culinary delights of our cafe's Specialties menu, featuring signature dishes and innovative creations that showcase the best of our culinary expertise. From gourmet pizzas and artisanal burgers to creative tacos and specialty entrees, each dish is expertly crafted to provide a memorable dining experience that will leave you craving more." textAlignment="JUSTIFY" wrappingWidth="460.0">
+                                       <font>
+                                          <Font name="Garamond" size="22.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children></VBox>
+               </content></ScrollPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

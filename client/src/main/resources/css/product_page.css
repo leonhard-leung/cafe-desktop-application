@@ -1,0 +1,43 @@
+#categoryHeader {
+    -fx-font-family: 'BOLDSTROM';
+    -fx-font-size: 40;
+    -fx-text-fill: #631f3a;
+}
+
+#subCategoryHeader {
+    -fx-font-family: 'SMART BOLD';
+    -fx-font-size: 30;
+    -fx-text-fill: #631f3a;
+}
+
+#text {
+    -fx-font-family: 'Louis George Cafe';
+    -fx-font-size: 22;
+    -fx-text-fill: #631f3a;
+}
+
+.split-pane {
+    -fx-divider-position: 0.5;
+}
+
+.split-pane:horizontal > .split-pane-divider {
+    -fx-background-color: #a35061;
+    -fx-background-insets: 0;
+    -fx-padding: 2;
+}
+
+.scroll-pane .scroll-bar:vertical,
+.scroll-pane .scroll-bar:vertical .track,
+.scroll-pane .scroll-bar:vertical .track-background {
+    -fx-background-color: #f2d3cc;
+    -fx-padding: 1;
+}
+
+.scroll-pane .scroll-bar .increment-button,
+.scroll-pane .scroll-bar .decrement-button {
+    -fx-opacity: 0;
+}
+
+.scroll-pane .scroll-bar:vertical .thumb {
+    -fx-background-color: #dfafb4;
+}

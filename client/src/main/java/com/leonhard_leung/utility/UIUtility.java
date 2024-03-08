@@ -7,6 +7,11 @@ import javafx.util.Duration;
 
 public class UIUtility {
 
+    /**
+     * Applies primary button effects including fade, click animation, and translation on mouse events.
+     *
+     * @param node the JavaFX Node to which the effects will be applied.
+     */
     public static void applyPrimaryButtonEffectsWithTranslation(Node node) {
         TranslateTransition normalTransition = new TranslateTransition(Duration.millis(100), node);
         FadeTransition fadeIn = new FadeTransition(Duration.millis(100), node);
@@ -42,8 +47,13 @@ public class UIUtility {
             normalTransition.setByY(-node.getTranslateY());
             normalTransition.playFromStart();
         });
-    }
+    } // end of applyPrimaryButtonEffectsWithTranslation
 
+    /**
+     * Applies primary button effects including fade and click animation on mouse events.
+     *
+     * @param node the javaFX Node to which the effects will be applied.
+     */
     public static void applyPrimaryButtonEffects(Node node) {
         FadeTransition fadeIn = new FadeTransition(Duration.millis(100), node);
         FadeTransition fadeOut = new FadeTransition(Duration.millis(250), node);
@@ -70,8 +80,13 @@ public class UIUtility {
         node.setOnMouseExited(event -> {
             fadeOut.playFromStart();
         });
-    }
+    } // end of applyPrimaryButtonEffects
 
+    /**
+     * Applies secondary button effects including click animation on mouse events.
+     *
+     * @param node The JavaFX Node to which the effects will be applied.
+     */
     public static void applySecondaryButtonEffects(Node node) {
         FadeTransition clickIn = new FadeTransition(Duration.millis(150), node);
         FadeTransition clickOut = new FadeTransition(Duration.millis(150), node);
@@ -86,8 +101,13 @@ public class UIUtility {
             clickOut.setDelay(Duration.millis(150));
             clickOut.play();
         });
-    }
+    } // end of applySecondaryButtonEffects
 
+    /**
+     * Applies screen shake effect to an image node on mouse hover.
+     *
+     * @param node The JavaFX Node (typically an image) to which the effect will be applied.
+     */
     public static void applyImageScreenShake(Node node) {
         TranslateTransition shakeTransition1 = new TranslateTransition(Duration.millis(50), node);
         shakeTransition1.setByX(2);
@@ -111,5 +131,5 @@ public class UIUtility {
             node.setTranslateX(0);
             node.setTranslateY(0);
         });
-    }
-}
+    } // end of applyImageScreenShake
+} // end of UIUtility class

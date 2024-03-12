@@ -20,12 +20,12 @@
                      </font>
                   </Text>
                   <Line endX="284.0" layoutX="115.0" layoutY="496.0" startX="-93.0" stroke="#631f3a" strokeWidth="2.0" />
-                  <Button id="loginButton" fx:id="loginBT" layoutX="67.0" layoutY="412.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Log In" textFill="#631f3a">
+                  <Button id="signInButton" fx:id="signInBT" layoutX="67.0" layoutY="412.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Sign In" textFill="#631f3a">
                      <font>
                         <Font name="Copperplate Gothic Light" size="20.0" />
                      </font>
                   </Button>
-                  <Button id="signupButton" fx:id="signupBT" layoutX="322.0" layoutY="412.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Sign Up" textFill="#631f3a">
+                  <Button id="signUpButton" fx:id="signUpBT" layoutX="322.0" layoutY="412.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Sign Up" textFill="#631f3a">
                      <font>
                         <Font name="Copperplate Gothic Light" size="20.0" />
                      </font>
@@ -63,6 +63,8 @@
                         <Image url="@../images/landing_page/home/tik_tok.png" />
                      </image>
                   </ImageView>
+                  <Text id="copyrightText" fill="#631f3a" layoutX="31.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="©Love&amp;LatteLounge" />
+                  <Circle fx:id="circle1" fill="#a35061" layoutX="14.0" layoutY="506.0" radius="6.0" stroke="TRANSPARENT" strokeType="INSIDE" />
                </children></AnchorPane>
          </children>
       </StackPane>
@@ -99,6 +101,7 @@
                   <Image url="@../images/app_logo.png" />
                </image>
             </ImageView>
+            <Circle fx:id="circle2" fill="#a35061" layoutX="986.0" layoutY="14.0" radius="6.0" stroke="TRANSPARENT" strokeType="INSIDE" />
          </children>
       </Pane>
    </top>

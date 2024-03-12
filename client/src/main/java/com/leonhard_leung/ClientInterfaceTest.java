@@ -1,12 +1,15 @@
 package com.leonhard_leung;
 
 import com.leonhard_leung.view.LandingPageView;
+import javafx.animation.ScaleTransition;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 public class ClientInterfaceTest extends Application {
 
@@ -17,7 +20,11 @@ public class ClientInterfaceTest extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/landing_page.fxml"));
-        Scene scene = new Scene(loader.load());
+        Parent landingPage = loader.load();
+        Parent signInSignUpPage = FXMLLoader.load(getClass().getResource("/fxml/sign_in_sign_up_page.fxml"));
+        Scene signInSignUpPageScene = new Scene(signInSignUpPage);
+
+        Scene scene = new Scene(landingPage);
         LandingPageView view = loader.getController();
         Font.loadFont(getClass().getResourceAsStream("/fonts/Chewy.ttf"), 12);
         Font.loadFont(getClass().getResourceAsStream("/fonts/Louis George Cafe.ttf"), 12);
@@ -33,7 +40,45 @@ public class ClientInterfaceTest extends Application {
         stage.setResizable(false);
         stage.setFullScreen(false);
         stage.centerOnScreen();
+
+        view.getSignInBT().setOnMouseClicked(event -> {
+            view.setCircleVisibility(true);
+            ScaleTransition transition1 = view.setCircleScaleTransition(Duration.seconds(1), view.getCircle1(), 1, 250);
+            ScaleTransition transition2 = view.setCircleScaleTransition(Duration.seconds(0.7), view.getCircle2(), 1, 250);
+
+            transition1.play();
+            transition2.play();
+
+
+            transition1.setOnFinished(event1 -> {
+                view.setCircleVisibility(false);
+                stage.setScene(signInSignUpPageScene);
+            });
+        });
+
+        view.getSignUpBT().setOnMouseClicked(event -> {
+            view.setCircleVisibility(true);
+            ScaleTransition transition1 = view.setCircleScaleTransition(Duration.seconds(1), view.getCircle1(), 1, 250);
+            ScaleTransition transition2 = view.setCircleScaleTransition(Duration.seconds(0.7), view.getCircle2(), 1, 250);
+
+            transition1.play();
+            transition2.play();
+
+            transition1.setOnFinished(event1 -> {
+                view.setCircleVisibility(false);
+                stage.setScene(signInSignUpPageScene);
+            });
+
+
+                /*
+                view.menuPane.setVisible(false);
+                view.stackPane.getChildren().setAll(signInSignUpContent);
+
+                 */
+        });
+
+
         stage.show();
-        view.getLoginBT().setOnAction(event -> System.out.println("Login Pressed"));
+        view.getSignInBT().setOnAction(event -> System.out.println("Login Pressed"));
     } // end of start
 } // end of ClientInterfaceTest

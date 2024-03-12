@@ -10,7 +10,13 @@
     -fx-text-fill: #631f3a;
 }
 
-#loginButton {
+#copyrightText {
+    -fx-font-family: 'Roboto Condensed Regular';
+    -fx-font-size: 14;
+    -fx-text-fill: #631f3a;
+}
+
+#signInButton {
     -fx-font-family: 'MoonLookDemo';
     -fx-font-size: 20;
     -fx-background-color: #631f3a;
@@ -21,7 +27,7 @@
     -fx-text-fill: #f2d3cc;
 }
 
-#signupButton {
+#signUpButton {
     -fx-font-family: 'MoonLookDemo';
     -fx-font-size: 20;
     -fx-background-color: transparent;
@@ -32,7 +38,7 @@
     -fx-text-fill: #631f3a;
 }
 
-#signupButton:hover {
+#signUpButton:hover {
     -fx-background-color: #631f3a;
     -fx-text-fill: #f2d3cc;
 }

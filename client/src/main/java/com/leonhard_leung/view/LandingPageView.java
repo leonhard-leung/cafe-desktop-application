@@ -1,6 +1,7 @@
 package com.leonhard_leung.view;
 
 import com.leonhard_leung.utility.UIUtility;
+import javafx.animation.ScaleTransition;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,6 +13,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.shape.Circle;
+import javafx.util.Duration;
 import java.awt.*;
 import java.io.IOException;
 import java.net.URI;
@@ -26,9 +29,9 @@ public class LandingPageView {
     @FXML
     private AnchorPane anchorPane;
     @FXML
-    private Button loginBT;
+    private Button signInBT;
     @FXML
-    private Button signupBT;
+    private Button signUpBT;
     @FXML
     private Button homeBT;
     @FXML
@@ -48,6 +51,10 @@ public class LandingPageView {
     @FXML
     private ImageView tiktokLogo;
     @FXML
+    private Circle circle1;
+    @FXML
+    private Circle circle2;
+    @FXML
     private Parent aboutContent;
     @FXML
     private Parent productContent;
@@ -56,11 +63,13 @@ public class LandingPageView {
 
     @FXML
     public void initialize() {
+        setCircleVisibility(false);
         initializeContentPanes();
         setComponentAnimations();
         setMenuClickBehavior();
         setSocialMediaImageBehavior();
         setMenuSwitch();
+        //setCircleTransition();
     } // end of initialize
 
     private void initializeContentPanes() {
@@ -103,8 +112,8 @@ public class LandingPageView {
     } // end of setMenuSwitch
 
     private void setComponentAnimations() {
-        UIUtility.applyPrimaryButtonEffectsWithTranslation(loginBT);
-        UIUtility.applySecondaryButtonEffects(signupBT);
+        UIUtility.applyPrimaryButtonEffectsWithTranslation(signInBT);
+        UIUtility.applySecondaryButtonEffects(signUpBT);
         UIUtility.applyImageScreenShake(sideImage);
     } // end of setComponentAnimations
 
@@ -132,6 +141,11 @@ public class LandingPageView {
             contactBT.setStyle(originalStyle);
         }
     } // end of removeMenuButtonHighlight
+
+    public void setCircleVisibility(boolean value) {
+        circle1.setVisible(value);
+        circle2.setVisible(value);
+    } // end of setCircleVisibility
 
     private void setSocialMediaImageBehavior() {
         setImageEnteredAndExited(instagramLogo, "/images/landing_page/home/instagram_hovered.png", "/images/landing_page/home/instagram.png");
@@ -164,11 +178,30 @@ public class LandingPageView {
         });
     } // end of setURI
 
-    public Button getLoginBT() {
-        return loginBT;
+    public ScaleTransition setCircleScaleTransition(Duration duration, Circle node, double initialXYValue, double xYValue) {
+        ScaleTransition transition = new ScaleTransition(duration, node);
+
+        transition.setFromX(initialXYValue);
+        transition.setFromY(initialXYValue);
+        transition.setToX(xYValue);
+        transition.setToY(xYValue);
+
+        return transition;
+    } // end of setCircleScaleTransition
+
+    public Button getSignInBT() {
+        return signInBT;
     }
 
-    public Button getSignupBT() {
-        return signupBT;
+    public Button getSignUpBT() {
+        return signUpBT;
+    }
+
+    public Circle getCircle1() {
+        return circle1;
+    }
+
+    public Circle getCircle2() {
+        return circle2;
     }
 } // end of LandingPageView class

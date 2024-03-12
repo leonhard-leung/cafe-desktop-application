@@ -19,13 +19,14 @@
     -fx-font-size: 22;
     -fx-text-fill: #631f3a;
     -fx-border-color: #dfafb4;
-    -fx-border-width: 1px;
+    -fx-border-width: 1;
     -fx-background-radius: 5;
     -fx-border-radius: 5;
 }
 
 #textField:focused {
-    -fx-focus-color: red;
+    -fx-border-color: #fc3860;
+    -fx-focus-color: #fc3860;
 }
 
 #submitMessage {

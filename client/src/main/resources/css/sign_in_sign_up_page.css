@@ -1,0 +1,81 @@
+#slidePanelHeader {
+    -fx-font-family: 'Fredoka One Regular';
+    -fx-font-size: 60;
+    -fx-text-fill: #a35061;
+}
+
+#signInAndSignUpHeader {
+    -fx-font-family: 'BOLDSTROM';
+    -fx-font-size: 60;
+    -fx-text-fill: #f2d3cc;
+}
+
+#slidePaneMessage {
+    -fx-font-family: 'Roboto Condensed Regular';
+    -fx-font-size: 28;
+    -fx-text-fill: #a35061;
+}
+
+#quote {
+    -fx-font-family: 'Chewy';
+    -fx-font-size: 24;
+    -fx-text-fill: #a35061;
+}
+
+#signInAndSignUpBT {
+    -fx-font-family: 'Fredoka One Regular';
+    -fx-font-size: 25;
+    -fx-background-color: #f2d3cc;
+    -fx-border-color: #f2d3cc;
+    -fx-border-width: 2;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-text-fill: #a35061;
+}
+
+#signInOrSignUpBT {
+    -fx-font-family: 'Happy Caramel Demo';
+    -fx-font-size: 25;
+    -fx-background-color: transparent;
+    -fx-border-color: #a35061;
+    -fx-border-width: 3;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-text-fill: #a35061;
+}
+
+#backToLandingPageBT {
+    -fx-font-family: 'Happy Caramel Demo';
+    -fx-font-size: 25;
+    -fx-background-color: transparent;
+    -fx-border-color: #a35061;
+    -fx-border-width: 3;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-text-fill: #a35061;
+}
+
+#signInOrSignUpBT:hover {
+    -fx-background-color: #a35061;
+    -fx-text-fill: #dfafb4;
+}
+
+#backToLandingPageBT:hover {
+    -fx-background-color: #a35061;
+    -fx-text-fill: #dfafb4;
+}
+
+#textField {
+    -fx-font-family: 'Louis George Cafe';
+    -fx-font-size: 20;
+    -fx-text-fill: #631f3a;
+    -fx-border-color: #f2d3cc;
+    -fx-border-width: 2;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+
+#textField:focused {
+    -fx-border-color: #f21d1d;
+    -fx-focus-color: #f21d1d;
+}

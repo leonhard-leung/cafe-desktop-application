@@ -2,7 +2,9 @@ package com.leonhard_leung.utility;
 
 import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
+import javafx.event.EventHandler;
 import javafx.scene.Node;
+import javafx.scene.input.MouseEvent;
 import javafx.util.Duration;
 
 public class UIUtility {
@@ -96,11 +98,19 @@ public class UIUtility {
         clickOut.setFromValue(0.7);
         clickOut.setToValue(1);
 
-        node.setOnMouseClicked(actionEvent -> {
+        EventHandler<MouseEvent> existingHandler = (EventHandler<MouseEvent>) node.getOnMouseClicked();
+
+        EventHandler<MouseEvent> newHandler = event -> {
+            if (existingHandler != null) {
+                existingHandler.handle(event);
+            }
+
             clickIn.play();
             clickOut.setDelay(Duration.millis(150));
             clickOut.play();
-        });
+        };
+
+        node.setOnMouseClicked(newHandler);
     } // end of applySecondaryButtonEffects
 
     /**
